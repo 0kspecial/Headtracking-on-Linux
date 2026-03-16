@@ -27,7 +27,7 @@ NATIVE LINUX OPENTRACK SETTINGS:
 
 Input: NeuralNet Tracker (or any solution that works for you)
 
-Output: UDP over network, 127.0.0.1 Port 4242 (Also allow this port on your ufw or other firewall)
+Output: UDP over network, 127.0.0.1 Port 4242 (Also allow this port on your ufw or other firewall, just make sure you open it for localhost only)
 
 PORTABLE OPENTRACK.exe: 
 
