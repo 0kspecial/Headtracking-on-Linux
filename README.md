@@ -24,11 +24,15 @@ After the installation/compilation was successful, launch your game from Steam w
 Use the following settings:
 
 NATIVE LINUX OPENTRACK SETTINGS: 
+
 Input: NeuralNet Tracker (or any solution that works for you)
+
 Output: UDP over network, 127.0.0.1 Port 4242 (Also allow this port on your ufw or other firewall)
 
 PORTABLE OPENTRACK.exe: 
+
 Input: UDP over network, 127.0.0.1 Port 4242 (Don't forget to open this port.)
+
 Output: Freetracker 2.0 Enhanced (make sure to select the correct interface option for your game if the headtracking input is buggy)
 
 Press Start on both running Opentrack GUIs, use your head to look around. Hopefully.
