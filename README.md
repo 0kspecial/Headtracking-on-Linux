@@ -35,3 +35,6 @@ Press Start on both running Opentrack GUIs, use your head to look around. Hopefu
 
 
 Other options: Your game might support UDP over network and you don't have to go through all of this, the native Opentrack will work just fine.
+
+
+This write-up is based on the experience of: https://github.com/opentrack/opentrack/issues/2109#issuecomment-3962445706
