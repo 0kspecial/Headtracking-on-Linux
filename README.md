@@ -18,7 +18,7 @@ Extract the portable opentrack version to ~./local/share/opentrack-launcher/inst
 
 The launch should be successful now, Opentrack.exe and your game both start. 
 
-Now you need to install the native Linux Opentrack. You may find an appimage or compile from source. To compile from source (recommended) follow the instructions on https://github.com/opentrack/opentrack/wiki/Building-on-Linux
+Now you need to install the native Linux Opentrack. You may find an appimage or compile from source. To compile from source (recommended) follow the instructions on https://github.com/opentrack/opentrack/wiki/Building-on-Linux. I highly recommand you automat this process, to keep up with dependencies.
 
 After the installation/compilation was successful, launch your game from Steam with the provided parameters to also launch the portable Opentrack.exe via opentrack-launcher. Start your Linux native Opentrack. 
 Use the following settings:
