@@ -1,6 +1,8 @@
 # Headtracking on Linux
 
-A short meta explanation on how to use Opentrack to achieve headtracking with games running on Proton.
+A short meta explanation on how to use Opentrack to achieve headtracking with games running on Proton. 
+This write-up is based on:
+opentrack/opentrack#2109 (comment)
 
 ---
 
@@ -159,8 +161,7 @@ After closing the game and `Opentrack.exe`:
 
 ---
 
-## Source
+## In case this write-up breaks
 
-This write-up is based on:
-opentrack/opentrack#2109 (comment)
+Please contact me, it will also break for me and i'd rather fix the issue before i run into it. 
 
