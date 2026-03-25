@@ -18,7 +18,7 @@ Extract the portable opentrack version to ~./local/share/opentrack-launcher/inst
 
 The launch should be successful now, Opentrack.exe and your game both start. 
 
-Now you need to install the native Linux Opentrack. You may find an appimage or compile from source. To compile from source (recommended) follow the instructions on https://github.com/opentrack/opentrack/wiki/Building-on-Linux. I highly recommand you automat this process, to keep up with dependencies.
+Now you need to install the native Linux Opentrack. You may find an appimage or compile from source. To compile from source (recommended) follow the instructions on https://github.com/opentrack/opentrack/wiki/Building-on-Linux. I highly recommend you automate this process, to keep up with dependencies.
 
 After the installation/compilation was successful, launch your game from Steam with the provided parameters to also launch the portable Opentrack.exe via opentrack-launcher. Start your Linux native Opentrack. 
 Use the following settings:
@@ -38,7 +38,7 @@ Output: Freetracker 2.0 Enhanced (make sure to select the correct interface opti
 Press Start on both running Opentrack GUIs, use your head to look around. Hopefully.
 
 
-Other options: Your game might support UDP over network and you don't have to go through all of this, the native Opentrack will work just fine.
+Other options: Your game might support UDP over network and you don't have to go through all of this, the native Opentrack will work just fine. If your targeted game doesn't support UDP input, i'd also suggest you explain this issue to the devs, or in case the game already reached it's EOL, the modding community.
 
 
 This write-up is based on the experience of: https://github.com/opentrack/opentrack/issues/2109#issuecomment-3962445706
