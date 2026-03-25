@@ -39,7 +39,7 @@ Press Start on both running Opentrack GUIs, use your head to look around. Hopefu
 
 Additional launch parameters: In case you use gamemode for better performance, your launch parameters would look this gamemoderun ~/.local/bin/opentrack-launcher %command%
 
-After closing the game and the Opentrack.exe make sure it actually ended by checking the PLAY/STOP button in the Steam GUI. Just to make the syncing of savegames is properly done. 
+After closing the game and the Opentrack.exe make sure it actually ended by checking the PLAY/STOP button in the Steam GUI. Press close if it didn't, just to make sure the syncing of savegames is done properly.
 
 
 Other options: Your game might support UDP over network and you don't have to go through all of this, the native Opentrack will work just fine. If your targeted game doesn't support UDP input, i'd also suggest you explain this issue to the devs, or in case the game already reached it's EOL, the modding community.
