@@ -1,48 +1,166 @@
-# Headtracking-on-Linux
-A short meta explanation on how to use Opentracker to achieve headtracking with Games running on Proton
+# Headtracking on Linux
 
-The current headtracking situation (early 2026) on Linux is confusing, use this write-up to get Opentrack headtracking in hopefully most games running under Steams Proton.
+A short meta explanation on how to use Opentrack to achieve headtracking with games running on Proton.
 
+---
 
-Get https://github.com/markx86/opentrack-launcher and follow the instructions. 
+## Overview
 
-This tool launches a windows Opentrack portable executable via Proton. (tested with Proton 10.0)
-After the installation process is complete, the launch of Opentrack will fail. This is expected since there is a dependency issue with different Qt6 .dlls in the most current Version of Opentrack (.
+The current headtracking situation (early 2026) on Linux is confusing. This write-up aims to help you get Opentrack headtracking working in most games running under Steam’s Proton.
 
-Make sure ~./local/share/opentrack-launcher/scripts exist, this indicates the installation was successful. This process can take a couple of minutes, even after the launch crashed.
-Now delete the contents of ~./local/share/opentrack-launcher/install
+---
 
-Download the 32-bit portable opentrack 2024.1.1 from https://github.com/opentrack/opentrack/releases/tag/opentrack-2024.1.1
+## Setup Instructions
 
-Extract the portable opentrack version to ~./local/share/opentrack-launcher/install
+### 1. Install opentrack-launcher
 
-The launch should be successful now, Opentrack.exe and your game both start. 
+Get: https://github.com/markx86/opentrack-launcher
+Follow the instructions provided there.
 
-Now you need to install the native Linux Opentrack. You may find an appimage or compile from source. To compile from source (recommended) follow the instructions on https://github.com/opentrack/opentrack/wiki/Building-on-Linux. I highly recommend you automate this process, to keep up with dependencies.
+This tool launches a Windows Opentrack portable executable via Proton (tested with Proton 10.0).
 
-After the installation/compilation was successful, launch your game from Steam with the provided parameters to also launch the portable Opentrack.exe via opentrack-launcher. Start your Linux native Opentrack. 
-Use the following settings:
+---
 
-NATIVE LINUX OPENTRACK SETTINGS: 
+### 2. First Launch Behavior
 
-Input: NeuralNet Tracker (or any solution that works for you)
+After installation, launching Opentrack will fail. This is expected due to a dependency issue with Qt6 DLLs in the most current version of Opentrack.
 
-Output: UDP over network, 127.0.0.1 Port 4242 (Also allow this port on your ufw or other firewall, just make sure you open it for localhost only)
+---
 
-PORTABLE OPENTRACK.exe: 
+### 3. Verify Installation
 
-Input: UDP over network, 127.0.0.1 Port 4242 (Don't forget to open this port.)
+Ensure the following directory exists:
 
-Output: Freetracker 2.0 Enhanced (make sure to select the correct interface option for your game if the headtracking input is buggy)
+```bash
+~/.local/share/opentrack-launcher/scripts
+```
 
-Press Start on both running Opentrack GUIs, use your head to look around. Hopefully.
+This indicates a successful installation.
 
-Additional launch parameters: In case you use gamemode for better performance, your launch parameters would look this gamemoderun ~/.local/bin/opentrack-launcher %command%
+**Note:** The process can take a couple of minutes, even if the launch crashes.
 
-After closing the game and the Opentrack.exe make sure it actually ended by checking the PLAY/STOP button in the Steam GUI. Press close if it didn't, just to make sure the syncing of savegames is done properly.
+---
 
+### 4. Clean Installation Directory
 
-Other options: Your game might support UDP over network and you don't have to go through all of this, the native Opentrack will work just fine. If your targeted game doesn't support UDP input, i'd also suggest you explain this issue to the devs, or in case the game already reached it's EOL, the modding community.
+Delete the contents of:
 
+```bash
+~/.local/share/opentrack-launcher/install
+```
 
-This write-up is based on the experience of: https://github.com/opentrack/opentrack/issues/2109#issuecomment-3962445706
+---
+
+### 5. Download Compatible Opentrack Version
+
+Download the 32-bit portable Opentrack 2024.1.1 from:
+https://github.com/opentrack/opentrack/releases/tag/opentrack-2024.1.1
+
+---
+
+### 6. Extract Files
+
+Extract the portable version into:
+
+```bash
+~/.local/share/opentrack-launcher/install
+```
+
+---
+
+### 7. Launch
+
+The launch should now be successful. `Opentrack.exe` and your game should both start.
+
+---
+
+## Native Linux Opentrack
+
+You also need the native Linux version of Opentrack.
+
+* Option 1: Use an AppImage
+* Option 2 (recommended): Compile from source
+
+Instructions:
+https://github.com/opentrack/opentrack/wiki/Building-on-Linux
+
+It is recommended to automate this process to keep up with dependencies.
+
+---
+
+## Running the Setup
+
+1. Launch your game from Steam using the provided parameters (see below).
+2. This will also launch the portable `Opentrack.exe` via opentrack-launcher.
+3. Start your native Linux Opentrack.
+
+---
+
+## Configuration
+
+### Native Linux Opentrack
+
+* **Input:** NeuralNet Tracker (or any working alternative)
+* **Output:** UDP over network
+
+  * Address: `127.0.0.1`
+  * Port: `4242`
+
+Make sure this port is allowed in your firewall (ufw or similar), restricted to localhost.
+
+---
+
+### Portable Opentrack.exe
+
+* **Input:** UDP over network
+
+  * Address: `127.0.0.1`
+  * Port: `4242`
+
+* **Output:** Freetrack 2.0 Enhanced
+
+  * Ensure the correct interface option is selected if headtracking input is buggy.
+
+---
+
+## Usage
+
+* Press **Start** in both Opentrack instances.
+* Use your head to look around.
+
+---
+
+## Steam Launch Parameters
+
+If using gamemode:
+
+```bash
+gamemoderun ~/.local/bin/opentrack-launcher %command%
+```
+
+---
+
+## Closing Notes
+
+After closing the game and `Opentrack.exe`:
+
+* Verify the process has fully exited in Steam (PLAY/STOP button).
+* If necessary, press **Close** to ensure proper savegame syncing.
+
+---
+
+## Alternatives
+
+* Some games support UDP input directly. In that case, the native Linux Opentrack alone is sufficient.
+* If a game does not support UDP input:
+
+  * Consider contacting the developers.
+  * If the game is end-of-life, check the modding community.
+
+---
+
+## Source
+
+This write-up is based on:
+opentrack/opentrack#2109 (comment)
+
