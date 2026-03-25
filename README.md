@@ -134,11 +134,16 @@ Make sure this port is allowed in your firewall (ufw or similar), restricted to 
 
 ## Steam Launch Parameters
 
-If using gamemode:
+```bash
+~/.local/bin/opentrack-launcher %command%
+```
+
+If using gamemode (this way the Opentrack.exe also benefits from gamemode):
 
 ```bash
 gamemoderun ~/.local/bin/opentrack-launcher %command%
 ```
+
 
 ---
 
